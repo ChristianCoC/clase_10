@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>CSS GRID</h1>
+        </header>
+        <section class="flex-grid-modulo">
+            <section class="flex-grid">
+                <h2>Flexbox vs CSS Grids</h2>
+                <img src="/img/flex-grid.jpg" alt="">
+            </section>
+            <section class="modulo-grid">
+                <h2>Modulo de diseño CSS Grid</h2>
+                <img src="/img/modulo-grid.jpg" alt="">
+            </section>
+        </section>
+        <section class="conceptos">
+            <h2>Conceptos Básicos</h2>
+            <ul>
+                <li>Grid Container: es nuestro elemento “padre”, donde se asigna un
+                    {display:grid;} y nos permitirá colocar otras propiedades para manipular
+                    nuestro diseño.</li>
+                <li>Grid Item: son los hijos directos de nuestro container. Estos los
+                    manejaremos a nuestra voluntad, nuestras filas y columnas que
+                    moveremos a nuestro gusto.</li>
+                <li>Grid Line: son las líneas divisorias horizontales y verticales.</li>
+                <li>Grid Track: es el espacio entre dos líneas adyacentes. Filas y columnas.</li>
+                <li>Grid Cell: nuestras celdas serán el espacio entre dos filas adyacentes y 2
+                    columnas adyacentes.</li>
+                <li>Grid Area: espacio rodeado por 4 grid lines.</li>
+            </ul>
+        </section>
+        <section class="contenedor">
+            <div class="texto-contenedor">
+                <h2>Contenedor</h2>
+                <p>Contenedor padre y sus elementos</p>
+            </div>
+            <div class="elemento-padre">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+            </div>
+        </section>
+        <section class="display">
+            <h2>Display</h2>
+            <p>Un elemento HTML se transforma en un contenedor de grilla cuando tiene
+                su propiedad display seteada en <strong>grid</strong> o <strong>inline-grid</strong></p>
+        </section>
+        <section class="items">
+            <h2>Grid Items</h2>
+            <div class="imagen-items">
+                <img src="/img/item-col.jpg" alt="">
+                <img src="/img/item-row.jpg" alt="">
+            </div>
+        </section>
+        <section class="gap-lines">
+            <section class="gaps">
+                <h2>Grid Gaps</h2>
+                <img src="/img/gaps.jpg" alt="">
+            </section>
+            <section class="lines">
+                <h2>Grid Lines</h2>
+                <img src="/img/grid-lines.jpg" alt="">
+            </section>
+        </section>
+        <section class="descripcion-lines">
+            <p>Pone un grid item en la línea
+                de la columna 1, que finaliza
+                en la línea de la columna 3.</p>
+            <p>Pone un grid item en la línea
+                de la fila 1, que finaliza en la
+                línea de la fila 3.</p>
+        </section>
+        <section class="propiedades">
+            <h2>Propiedades</h2>
+            <div class="tabla-prop">
+                <div class="head">Propiedad</div>
+                <div class="head">Descripción</div>
+                <div>column-gap</div>
+                <div>Especifica el espacio entre las columnas.</div>
+                <div>gap</div>
+                <div>Propiedad abreviada. Espacio entre filas y entre columnas .</div>
+                <div>grid</div>
+                <div>Propiedad abreviada. Filas y columnas, de la cuadrícula, áreas de la cuadrícula, filas y
+                    columnas automáticas y propiedades de flujo automático de cuadrícula.</div>
+                <div>grid-area</div>
+                <div>Especifica un nombre para el elemento de la cuadrícula. Es una propiedad abreviada
+                    para grid-row-start, grid-column-start, grid-row-end y grid-column-end.</div>
+                <div>grid-auto-columns</div>
+                <div>Especifica un tamaño de columna predeterminado.</div>
+                <div>grid-auto-flow</div>
+                <div>Determina cómo se insertan los elementos en la cuadrícula.</div>
+                <div>grid-auto-rows</div>
+                <div>Especifica un tamaño de fila predeterminado.</div>
+                <div>grid-column</div>
+                <div>Una propiedad abreviada para las propiedades grid-column-start y
+                    grid-column-end.</div>
+                <div>grid-column-end</div>
+                <div>Especifica dónde termina el elemento de la cuadrícula.</div>
+                <div>grid-column-gap</div>
+                <div>Especifica el tamaño del espacio entre columnas.</div>
+                <div>grid-column-start</div>
+                <div>Especifica dónde comienza el elemento de la cuadrícula.</div>
+                <div>grid-gap</div>
+                <div>Una propiedad abreviada para las propiedades grid-row-gap y grid-column-gap.</div>
+                <div>grid-row</div>
+                <div>Una propiedad abreviada para las propiedades grid-row-start y grid-row-end.</div>
+                <div>grid-row-end</div>
+                <div>Especifica dónde termina el elemento de la cuadrícula.</div>
+                <div>grid-row-gap</div>
+                <div>Especifica el tamaño del espacio entre filas.</div>
+                <div>grid-row-start</div>
+                <div>Especifica dónde comienza el elemento de la cuadrícula.</div>
+                <div>grid-template</div>
+                <div>Una propiedad abreviada para las propiedades de las filas de plantilla de
+                    cuadrícula, columnas de plantilla de cuadrícula y áreas de cuadrícula.</div>
+                <div>grid-template-areas</div>
+                <div>Especifica cómo mostrar columnas y filas, utilizando elementos de cuadrícula
+                    con nombre.</div>
+                <div>grid-template-columns</div>
+                <div>Especifica el tamaño de las columnas y cuántas columnas en un diseño de
+                    cuadrícula.</div>
+                <div>grid-template-rows</div>
+                <div>Especifica el tamaño de las filas en un diseño de cuadrícula.</div>
+                <div>row-gap</div>
+                <div>Especifica el espacio entre las filas de la cuadrícula.</div>
+            </div>
+        </section>
+        <section class="grid-cont">
+            <h2>Grid Container</h2>
+            <img src="/img/container.jpg" alt="">
+        </section>
+        <section class="temp-col">
+            <h2>Grid Template Columns</h2>
+            <div class="grid-temp-col">
+                <div>300px</div>
+                <div>200px</div>
+                <div>400px</div>
+                <div>300px</div>
+                <div>200px</div>
+                <div>400px</div>
+            </div>
+            <div class="grid-temp-col-2">
+                <div>50%</div>
+                <div>35%</div>
+                <div>15%</div>
+                <div>50%</div>
+                <div>35%</div>
+                <div>15%</div>
+            </div>
+            <div class="grid-temp-col-3">
+                <div>auto</div>
+                <div>auto</div>
+                <div>auto</div>
+                <div>auto</div>
+                <div>auto</div>
+                <div>auto</div>
+            </div>
+            <div class="grid-temp-col-4">
+                <div>0.5fr</div>
+                <div>2fr</div>
+                <div>1fr</div>
+                <div>0.5fr</div>
+                <div>2fr</div>
+                <div>1fr</div>
+            </div>
+            <div class="grid-temp-col-5">
+                <div>repeat(3, 1fr)</div>
+                <div>repeat(3, 1fr)</div>
+                <div>repeat(3, 1fr)</div>
+                <div>repeat(3, 1fr)</div>
+                <div>repeat(3, 1fr)</div>
+                <div>repeat(3, 1fr)</div>
+            </div>
+        </section>
+        <section class="temp-row">
+            <h2>Grid Template Row</h2>
+            <div class="grid-temp-row">
+                <div>80px</div>
+                <div>80px</div>
+                <div>80px</div>
+                <div>200px</div>
+                <div>200px</div>
+                <div>200px</div>
+            </div>
+        </section>
+        <section class="justify-content">
+            <h2>Justify Content</h2>
+            <div class="evenly">
+                <h3>space-evenly</h3>
+                <img src="/img/space-evenly.jpg" alt="">
+            </div>
+            <div class="center">
+                <h3>center</h3>
+                <img src="/img/center.jpg" alt="">
+            </div>
+            <div class="around">
+                <h3>space-around</h3>
+                <img src="/img/space-around.jpg" alt="">
+            </div>
+            <div class="start">
+                <h3>start</h3>
+                <img src="/img/start.jpg" alt="">
+            </div>
+            <div class="between">
+                <h3>space-between</h3>
+                <img src="/img/space-between.jpg" alt="">
+            </div>
+            <div class="end">
+                <h3>end</h3>
+                <img src="/img/end.jpg" alt="">
+            </div>
+        </section>
+        <section class="align-content">
+            <h2>Align Content</h2>
+            <div class="center">
+                <h3>center</h3>
+                <img src="/img/align-center.jpg" alt="">
+            </div>
+            <div class="evenly">
+                <h3>space-evenly</h3>
+                <img src="/img/align-evenly.jpg" alt="">
+            </div>
+            <div class="around">
+                <h3>space-around</h3>
+                <img src="/img/align-around.jpg" alt="">
+            </div>
+            <div class="between">
+                <h3>space-between</h3>
+                <img src="/img/align-between.jpg" alt="">
+            </div>
+            <div class="start">
+                <h3>start</h3>
+                <img src="/img/align-start.jpg" alt="">
+            </div>
+            <div class="end">
+                <h3>end</h3>
+                <img src="/img/align-end.jpg" alt="">
+            </div>
+        </section>
+        <section class="area">
+            <h2>Propiedad Grid Area</h2>
+            <p>La propiedad grid-area especifica el tamaño y la ubicación de un elemento
+                de cuadrícula en el diseño, y es una propiedad abreviada para las siguientes
+                propiedades: grid-row-start, grid-column-start, grid-row-end y
+                grid-column-end.</p>
+            <p>La grid-area también se puede utilizar para asignar un nombre a un
+                elemento de la cuadrícula. Y se puede hacer referencia a los elementos de
+                cuadrícula con nombre mediante la propiedad grid-template-areas del
+                contenedor de cuadrícula.</p>
+            <div class="ejemplos">
+                <h3>Ejemplos:</h3>
+                <div>
+                    <h4>Caso 1</h4>
+                    <p>El area ocupa una columna</p>
+                    <img src="/img/area_1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Caso 2</h4>
+                    <p>El area ocupa un grupo de celdas en horizontal</p>
+                    <img src="/img/area_2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Caso 3</h4>
+                    <p>El area ocupa un grupo de celdas en vertical</p>
+                    <img src="/img/area_3.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Caso 4</h4>
+                    <p>Esquema básico de pagina Web, con 6 columnas y 3 filas</p>
+                    <img src="/img/area_4.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="ejemplo-web">
+            <h2>Ejemplo de Pagina Web con Grid</h2>
+            <img src="/img/ejemplo.jpg" alt="">
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2023 Christian Siles. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
